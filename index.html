@@ -6,41 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Todo App</title>
     <link rel="stylesheet" href="node_modules/bulma/css/bulma.css" />
-    <script src="services/jquery.js"></script>
-    <script src="services/background.js"></script>
-    <script src="services/name.js"></script>
-    <script src="services/weather.js"></script>
-    <script src="services/quotes.js"></script>
-    <script src="services/todo.js"></script>
-    <style>
-      .mainbg {
-        height: 100vh;
-        background-repeat: no-repeat;
-        background-size: cover;
-      }
-      .trans {
-        height: 100vh;
-        background-color: #0000007a;
-      }
-    </style>
+    <link rel="stylesheet" href="./style.css">
   </head>
   <body>
     <div class="mainbg">
       <div class="trans">
-        <section class="section">
+        <div class="greeting">
+        </div>
+        <hr>
+
+        <!-- quote and weather section -->
+        <section>
           <div class="container">
             <div class="columns">
-              <div class="column is-4" id="quote">
-                <p class="has-text-light is-size-5"></p>
+              <div class="column is-4 quote" id="quote">
+                <p class="is-size-5"></p>
               </div>
               <div class="column is-6"></div>
-              <div class="column is-2" id="weather">
-                <p class="has-text-white has-text-weight-bold is-size-5"></p>
+              <div class="column is-2 weather" id="weather">
+                <p class="has-text-weight-bold is-size-5"></p>
               </div>
             </div>
           </div>
         </section>
 
+        <!-- user name input section -->
         <section class="section">
           <div class="container">
             <div class="columns is-centered">
@@ -50,7 +40,7 @@
                     type="text"
                     class="input is-large is-primary is-rounded"
                     is-focused
-                    placeholder="Who are you ?"
+                    placeholder="Enter your Name"
                   />
                 </div>
               </div>
@@ -58,7 +48,8 @@
           </div>
         </section>
 
-        <section class="section">
+        <!-- Todo list and input section -->
+        <section>
           <div class="container">
             <div class="columns is-centered">
               <div class="column is-half">
@@ -79,4 +70,11 @@
       </div>
     </div>
   </body>
+  <script src="services/jquery.js"></script>
+  <script src="services/background.js"></script>
+  <script src="services/name.js"></script>
+  <script src="services/weather.js"></script>
+  <script src="services/quotes.js"></script>
+  <script src="services/todo.js"></script>
+  <script src="services/greeting.js"></script>
 </html>

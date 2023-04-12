@@ -6,7 +6,6 @@ $(document).ready(() => {
     $("#todo input").keypress((event) => {
         if (event.which == 13) {
             const todo = event.currentTarget.value;
-            console.log("todo", todo);
 
             if (todo) {
                 addTodo(todo);
@@ -33,13 +32,12 @@ function removeTodo(itemKey) {
 function getAllTodos() {
     chrome.storage.local.get(null, (item) => {
 
-        console.log("item", item);
         for (let [key, value] of Object.entries(item)) {
             if (key != "name") {
                 let ui = `<li class="has-text-white" id="${key}">
-                            <label class="label-text">
+                            <label class="label-text todo">
                                 <input type="checkbox"  id="${key}"/>
-                                ${value}
+                                &nbsp;&nbsp;&nbsp;${value}
                             </label>
                         </li>`
                 $("#todoSection").append(ui)
@@ -64,8 +62,8 @@ function addTodo(todoItem) {
 
     let ui = `<li id="${key}" class="has-text-white">
                     <label class="label-text">
-                        <input type="checkbox" id="${key}" />
-                        ${todoItem}
+                        <input type="checkbox" class="checkbox" id="${key}" />
+                        &nbsp;&nbsp;&nbsp;${todoItem}
                     </label>
                 </li>`
 

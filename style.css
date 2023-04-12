@@ -1,0 +1,39 @@
+.mainbg {
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.trans {
+    height: 100vh;
+    background-color: #000000bf;
+}
+.quote {
+    color: #90EE90;
+}
+.weather{
+    color: #90EE90;
+}
+.todo{
+    font-size: 20px;
+}
+.user-name{
+    color: #ADD8E6;
+    font-size: xx-large;
+}
+.greeting{
+    color: #ADD8E6;
+    font-size: medium;
+    text-align: center;
+    padding-top: 20px;
+
+}
+hr{
+    color: #90EE90;
+    border: 1px dotted black;
+    opacity: 0.3;
+}
+.label-text, checkbox{
+    color: #ADD8E6;
+    cursor: pointer;
+}

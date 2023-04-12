@@ -5,7 +5,6 @@ navigator.geolocation.getCurrentPosition((position, error) => {
     fetch(`https://fcc-weather-api.glitch.me/api/current?lat=${lat}&lon=${lon}`).then(weather =>
         weather.json()
     ).then(result => {
-        console.log("result", result);
         const ele = document.querySelector("#weather p");
         ele.textContent = result.main.temp + "°C";
     })
