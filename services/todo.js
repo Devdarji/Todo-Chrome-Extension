@@ -34,9 +34,9 @@ function getAllTodos() {
 
         for (let [key, value] of Object.entries(item)) {
             if (key != "name") {
-                let ui = `<li class="has-text-white" id="${key}">
+                let ui = `<li id="${key}">
                             <label class="label-text todo">
-                                <input type="checkbox"  id="${key}"/>
+                                <input type="checkbox" class="checkbox"  id="${key}"/>
                                 &nbsp;&nbsp;&nbsp;${value}
                             </label>
                         </li>`
@@ -60,8 +60,8 @@ function addTodo(todoItem) {
         [key]: todoItem
     })
 
-    let ui = `<li id="${key}" class="has-text-white">
-                    <label class="label-text">
+    let ui = `<li id="${key}">
+                    <label class="label-text todo">
                         <input type="checkbox" class="checkbox" id="${key}" />
                         &nbsp;&nbsp;&nbsp;${todoItem}
                     </label>
