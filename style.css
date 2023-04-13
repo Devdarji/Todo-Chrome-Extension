@@ -37,3 +37,37 @@ hr{
     color: #ADD8E6;
     cursor: pointer;
 }
+.todo-lists{
+    margin-right: 50px;
+    height: 500px;
+    overflow: auto;
+}
+
+
+/* Styles for the scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Styles for the track */
+::-webkit-scrollbar-track {
+    background: #888;
+    border-radius: 8px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles for the thumb */
+::-webkit-scrollbar-thumb {
+    background: #90EE90;
+    border-radius: 5px;
+    border: 2px solid #ADD8E6;
+}
+/* Styles for the corner */
+::-webkit-scrollbar-corner {
+    background: #ADD8E6;
+}
+
+/* Styles for the buttons (up and down arrows) */
+::-webkit-scrollbar-button {
+    display: none;
+}
